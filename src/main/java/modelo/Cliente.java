@@ -4,7 +4,7 @@ import java.util.UUID;
 import java.util.function.Supplier;
 
 public class Cliente {
-    
+
     private final String id;
     private final String nombre;
     private final String cedula;
@@ -18,11 +18,11 @@ public class Cliente {
         this.correo = correo;
         this.telefono = telefono;
     }
-    
-      //SUPPLIER: generar un sku automatico cuando se cree un producto nuevo.
-    private static final Supplier<String> generarID=()-> 
-            "ID-"+UUID.randomUUID().toString().substring(0,4).toUpperCase();
-    
+
+    //SUPPLIER: generar un sku automatico cuando se cree un producto nuevo.
+    private static final Supplier<String> generarID = ()
+            -> "ID-" + UUID.randomUUID().toString().substring(0, 4).toUpperCase();
+
     public String getId() {
         return id;
     }
@@ -42,5 +42,5 @@ public class Cliente {
     public String getTelefono() {
         return telefono;
     }
-    
+
 }

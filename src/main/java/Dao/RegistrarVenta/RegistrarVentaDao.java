@@ -1,4 +1,4 @@
-package dao.Venta;
+package Dao.RegistrarVenta;
 
 import dao.Conexion;
 import java.sql.CallableStatement;
@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.UUID;
 
 public class RegistrarVentaDao {
+
     Conexion c = new Conexion();
 
     // Registra la venta y su detalle
@@ -14,8 +15,7 @@ public class RegistrarVentaDao {
         String sql = "{call sp_realizar_venta(?, ?, ?, ?, ?, ?, ?)}";
         String idVenta = "VEN-" + UUID.randomUUID().toString().substring(0, 9).toUpperCase();
 
-        try (Connection con = c.conexion();
-             CallableStatement cs = con.prepareCall(sql)) {
+        try (Connection con = c.conexion(); CallableStatement cs = con.prepareCall(sql)) {
 
             cs.setString(1, idVenta);
             cs.setString(2, idCliente);

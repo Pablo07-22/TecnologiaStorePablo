@@ -1,12 +1,13 @@
-package Vista.MenuPrincipalCelulares;
+package Vista.MenuPrincipalAdmin;
 
 import Vista.Validaciones.Validaciones;
 import java.util.Scanner;
 
-public class MenuPrincipalAdmin {
+public class MenuPrincipalAdministrador {
+
     Validaciones v = new Validaciones();
 
-    public int MenuPrincipalAdmin (){
+    public int MenuPrincipalAdmins() {
         System.out.println("""
                            ==== Bienvenido ¿A que menu deseas ir? ====
                              1. Menu Celulares 
@@ -18,9 +19,9 @@ public class MenuPrincipalAdmin {
                            """);
         Scanner leer = new Scanner(System.in);
         String op = leer.nextLine();
-        while (!v.Validar_menus(op)){
+        while (!v.Validar_menus(op)) {
             System.out.println("Opcion incorrecta intenta de nuevo");
-            op= leer.nextLine();
+            op = leer.nextLine();
         }
         return Integer.parseInt(op);
     }

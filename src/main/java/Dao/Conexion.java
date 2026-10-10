@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Conexion {
 
-        public Connection conexion(){
+    public Connection conexion() {
         Connection c = null;
         try {
             c = DriverManager.getConnection("jdbc:mysql://localhost:3306/TecnologiaStorePablo", "root", "Pablo.07");
@@ -15,5 +15,5 @@ public class Conexion {
             System.out.println(e.getMessage());
         }
         return c;
-        }
+    }
 }

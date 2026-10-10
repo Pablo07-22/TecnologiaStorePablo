@@ -4,9 +4,10 @@ import Vista.Validaciones.Validaciones;
 import java.util.Scanner;
 
 public class MenuAdminCelulares {
+
     Validaciones v = new Validaciones();
 
-   public int MenuAdminCelular(){
+    public int MenuAdminCelulares() {
         System.out.println("""
                            Bienvenido ¿Que deseas hacer?
                            1. Añadir Celular
@@ -16,15 +17,15 @@ public class MenuAdminCelulares {
                            5. Regresar
                            """);
         Scanner leer = new Scanner(System.in);
-        String op=leer.nextLine();
-        while (!v.Validar_menus(op)){
+        String op = leer.nextLine();
+        while (!v.Validar_menus(op)) {
             System.out.println("Opcion incorrecta intenta de nuevo");
-            op= leer.nextLine();
+            op = leer.nextLine();
         }
         return Integer.parseInt(op);
-   }
-   
-   public int MenuActualizarCelular(){
+    }
+
+    public int MenuActualizarCelular() {
         System.out.println("""
                            Bienvenido ¿Que deseas Actualizar?
                            1. Actualizar Marca
@@ -37,8 +38,8 @@ public class MenuAdminCelulares {
                            8. Actualizar Regresar
                            """);
         Scanner leer = new Scanner(System.in);
-        String op=leer.nextLine();
-        while (!v.Validar_menus(op)){
+        String op = leer.nextLine();
+        while (!v.Validar_menus(op)) {
             System.out.println("Opcion incorrecta intenta de nuevo");
             op = leer.nextLine();
         }

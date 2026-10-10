@@ -10,26 +10,25 @@ import java.util.List;
 import modelo.Empleado;
 
 public class ListarEmpleadoDao {
-   Conexion c = new Conexion();
 
-   public List<Empleado> ListarEmpleados() {
-       List<Empleado> listaEmpleados = new ArrayList<>();
-       String sql = "{call sp_listar_empleados()}";
+    Conexion c = new Conexion();
 
-       try (Connection con = c.conexion();
-           CallableStatement cs = con.prepareCall(sql);
-           ResultSet rs = cs.executeQuery()) {
-          
-           while (rs.next()) {
-           String idReal = rs.getString("id");
-           String nombre = rs.getString("nombre");
-           String telefono = rs.getString("telefono");
-           Empleado empleado = new Empleado(nombre, telefono);
-           empleado.setId(idReal);
-           listaEmpleados.add(empleado);
+    public List<Empleado> ListarEmpleados() {
+        List<Empleado> listaEmpleados = new ArrayList<>();
+        String sql = "{call sp_listar_empleados()}";
+
+        try (Connection con = c.conexion(); CallableStatement cs = con.prepareCall(sql); ResultSet rs = cs.executeQuery()) {
+
+            while (rs.next()) {
+                String idReal = rs.getString("id");
+                String nombre = rs.getString("nombre");
+                String telefono = rs.getString("telefono");
+                Empleado empleado = new Empleado(nombre, telefono);
+                empleado.setId(idReal);
+                listaEmpleados.add(empleado);
             }
         } catch (SQLException e) {
-           System.out.println("Error al listar los empleados: " + e.getMessage());
+            System.out.println("Error al listar los empleados: " + e.getMessage());
         }
 
         return listaEmpleados;

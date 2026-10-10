@@ -1,6 +1,7 @@
 package modelo;
 
 public class Celular {
+
     private String id;
     private Marca marca;
     private String modelo;
@@ -32,8 +33,6 @@ public class Celular {
         this.stock = stock;
         this.stockMinimo = stockMinimo;
     }
-
-    
 
     public String getId() {
         return id;

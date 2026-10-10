@@ -1,4 +1,4 @@
-package Dao.Cliente;
+package Dao.RegistrarCliente;
 
 import dao.Conexion;
 import java.sql.CallableStatement;
@@ -8,14 +8,14 @@ import java.sql.Types;
 import modelo.Cliente;
 
 public class RegistrarClienteDao {
+
     Conexion c = new Conexion();
 
     public String registrarCliente(Cliente cliente) {
         String sql = "{call sp_registrar_cliente(?, ?, ?, ?, ?, ?)}";
         String idCliente = null;
 
-        try (Connection con = c.conexion();
-             CallableStatement cs = con.prepareCall(sql)) {
+        try (Connection con = c.conexion(); CallableStatement cs = con.prepareCall(sql)) {
 
             cs.setString(1, cliente.getId());
             cs.setString(2, cliente.getNombre());
