@@ -4,7 +4,7 @@ public class TenologiaStoreMain {
 
     public static void main(String[] args) {
         GestionMenuPrincipal gm = new GestionMenuPrincipal();
-        gm.RespuestaMenuPrincipal();;
+        gm.RespuestaMenuPrincipal();
     }
 
 }

@@ -3,7 +3,6 @@ package Controlador.MenuAdmin;
 import Controlador.GestionMenuPrincipal;
 import Controlador.ReporteVentasRealizadas;
 import Vista.MenuPrincipalAdmin.MenuPrincipalAdministrador;
-import Vista.MenuPrincipalCelulares.MenuAdminCelulares;
 
 public class MenuPrincipalAdmin {
 
