@@ -1,5 +1,6 @@
 package Controlador.MenuAdmin;
 
+import Controlador.AlertaStock.CelularAlerta;
 import Controlador.GestionMenuPrincipal;
 import Controlador.ReporteVentasRealizadas;
 import Vista.MenuPrincipalAdmin.MenuPrincipalAdministrador;
@@ -25,7 +26,8 @@ public class MenuPrincipalAdmin {
                     rvr.mostrarReportesDesdeDat();
                     break;
                 case 4:
-                    System.out.println("Informacion Celulares");
+                    CelularAlerta ca = new CelularAlerta();
+                    ca.listarCelularesConAlertas();
                     break;
                 case 5:
                     System.out.println("============Regresando===========");
