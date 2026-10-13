@@ -86,7 +86,7 @@ public class RealizarCompra {
                 total);
 
         if (exitoVenta == true) {
-            rvr.sincronizarYGuardarEnDat();
+            rvr.sincronizarGuardarEnDat();
         }
     }
 }
