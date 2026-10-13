@@ -14,7 +14,7 @@ public class ActualizarEmpleadoDao {
         String sql = "{call sp_actualizar_empleado(?,?,?)}";
 
         if (empleado.getId() == null || empleado.getId().trim().isEmpty()) {
-            System.out.println("Error: El objeto Celular no tiene un ID asignado.");
+            System.out.println("El objeto Celular no tiene un ID asignado");
             return false;
         }
         try (Connection con = c.conexion(); CallableStatement cs = con.prepareCall(sql)) {

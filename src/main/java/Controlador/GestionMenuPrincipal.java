@@ -18,10 +18,10 @@ public class GestionMenuPrincipal {
             switch (op) {
                 case 1:
                     Scanner leer = new Scanner(System.in);
-                    System.out.println("Ingrese la contraseña");
+                    System.out.println("Ingrese la contraseña de admin");
                     double contra = leer.nextDouble();
                     if (contra != 1234) {
-                        System.out.println("Contraseñaincorrecta");
+                        System.out.println("Contraseña incorrecta");
                     } else {
                         MenuPrincipalAdmin mpa = new MenuPrincipalAdmin();
                         mpa.MenuPrincipalAdmin();
@@ -46,11 +46,12 @@ public class GestionMenuPrincipal {
             op = mc.MenuCliente();
             switch (op) {
                 case 1:
-                    System.out.println("Modulo Celulares");
+                    System.out.println("MODULO CELULARES ");
                     ListarCelular lc = new ListarCelular();
                     lc.Listar();
                     break;
                 case 2:
+                    System.out.println("MODULO DE COMPRAS ");
                     RealizarCompra rc = new RealizarCompra();
                     rc.RealizarCompras();
                     break;

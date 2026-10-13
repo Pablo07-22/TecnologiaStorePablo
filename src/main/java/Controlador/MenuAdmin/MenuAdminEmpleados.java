@@ -18,23 +18,28 @@ public class MenuAdminEmpleados {
             op = me.MenuAdminEmpleados();
             switch (op) {
                 case 1:
+                    System.out.println("MODULO AGREGAR");
                     AgregarEmpleado ae = new AgregarEmpleado();
                     ae.Agregar();
                     break;
                 case 2:
+                    System.out.println("MODULO ELIMINAR");
                     EliminarEmpleado ee = new EliminarEmpleado();
                     ee.Eliminar();
                     break;
                 case 3:
+                    System.out.println("MODULO LISTAR");
                     ListarEmpleado le = new ListarEmpleado();
                     le.Listar();
                     break;
                 case 4:
+                    System.out.println("MODULO ACTUALIZAR");
                     ActualizarEmpleado acte = new ActualizarEmpleado();
                     acte.Actualizar();
                     break;
                 case 5:
-                    System.out.println("============Regresando===========");
+                    
+                    System.out.println("REGRESANDO A MENU PRINCIPAL");
                     MenuPrincipalAdmin mpa = new MenuPrincipalAdmin();
                     mpa.MenuPrincipalAdmin();
                     break;
@@ -61,7 +66,7 @@ public class MenuAdminEmpleados {
                     aed.ActualizarEmpleado(empleado);
                     break;
                 case 3:
-                    System.out.println("========= Regresando ======");
+                    System.out.println("REGRESANDO");
                     MenuAdminEmpleados();
                 default:
                     throw new AssertionError();

@@ -11,7 +11,6 @@ public class Celular {
     private int stock;
     private int stockMinimo;
 
-    // 1. Constructor SIN ID (se usa cuando vas a CREAR/INSERTAR un nuevo celular)
     public Celular(Marca marca, String modelo, SistemaOperativo sistemaop, CategoriaGama gama, double precio, int stock, int stockMinimo) {
         this.marca = marca;
         this.modelo = modelo;
@@ -22,7 +21,6 @@ public class Celular {
         this.stockMinimo = stockMinimo;
     }
 
-    // 2. Constructor CON ID (se usa cuando LISTAS o BUSCAS celulares que ya existen en la BD)
     public Celular(String id, Marca marca, String modelo, SistemaOperativo sistemaop, CategoriaGama gama, double precio, int stock, int stockMinimo) {
         this.id = id;
         this.marca = marca;
@@ -98,7 +96,6 @@ public class Celular {
         this.stockMinimo = stockMinimo;
     }
 
-    // Formato de salida para la consola en el Listar
     @Override
     public String toString() {
         return """

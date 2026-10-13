@@ -9,11 +9,10 @@ public class MenuPrincipal {
 
     public int MenuPrincipal() {
         System.out.println("""
-                           ==== Bienvenido A TecnologiaStore ====
+                           Bienvenido A TecnologiaStore
                              1. Administrador 
                              2. Cliente
                              3. Salir
-                           =======================================
                            """);
         Scanner leer = new Scanner(System.in);
         String op = leer.nextLine();

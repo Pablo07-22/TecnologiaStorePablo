@@ -15,7 +15,6 @@ public class Empleado {
         this.telefono = telefono;
     }
 
-    //SUPPLIER: generar un sku automatico cuando se cree un producto nuevo.
     private static final Supplier<String> generarID = ()
             -> "ID-" + UUID.randomUUID().toString().substring(0, 6).toUpperCase();
 

@@ -21,18 +21,22 @@ public class MenusAdminCelulares {
             op = mac.MenuAdminCelulares();
             switch (op) {
                 case 1:
+                    System.out.println("MODULO AGREGAR CELULAR");
                     AgregarCelular ac = new AgregarCelular();
                     ac.agregar();
                     break;
                 case 2:
+                    System.out.println("MODULO ELIMINAR CELULAR");
                     EliminarCelular ec = new EliminarCelular();
                     ec.Eliminar();
                     break;
                 case 3:
+                    System.out.println("MODULO LISTAR CELULAR");
                     ListarCelular lc = new ListarCelular();
                     lc.Listar();
                     break;
                 case 4:
+                    System.out.println("MODULO ACTUALIZAR CELULAR");
                     ActualizarCelular atc = new ActualizarCelular();
                     atc.Actualizar();
                     break;

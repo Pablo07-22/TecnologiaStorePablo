@@ -14,7 +14,7 @@ public class ActualizarCelularDao {
         String sql = "{call sp_actualizar_celular(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
 
         if (celular.getId() == null || celular.getId().trim().isEmpty()) {
-            System.out.println("Error: El objeto Celular no tiene un ID asignado.");
+            System.out.println("El objeto Celular no tiene un ID asignado");
             return false;
         }
         try (Connection con = c.conexion(); CallableStatement cs = con.prepareCall(sql)) {
@@ -29,10 +29,10 @@ public class ActualizarCelularDao {
             cs.setInt(9, celular.getStockMinimo());
             int filasAfectadas = cs.executeUpdate();
             if (filasAfectadas > 0) {
-                System.out.println("¡Celular actualizado correctamente!");
+                System.out.println("Celular actualizado correctamente");
                 return true;
             } else {
-                System.out.println("No se encontró el celular con el ID especificado.");
+                System.out.println("No se encontró el celular con el ID especificado");
                 return false;
             }
         } catch (SQLException e) {

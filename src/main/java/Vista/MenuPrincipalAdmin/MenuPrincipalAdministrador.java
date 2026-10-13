@@ -9,13 +9,12 @@ public class MenuPrincipalAdministrador {
 
     public int MenuPrincipalAdmins() {
         System.out.println("""
-                           ==== Bienvenido ¿A que menu deseas ir? ====
+                           Bienvenido ¿A que menu deseas ir?
                              1. Menu Celulares 
                              2. Menu Empleados
                              3. Reporte Ventas Realizadas
                              4. Informacion de celulares
                              5. Regresar
-                           =======================================
                            """);
         Scanner leer = new Scanner(System.in);
         String op = leer.nextLine();

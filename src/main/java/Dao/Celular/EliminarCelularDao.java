@@ -20,7 +20,7 @@ public class EliminarCelularDao {
             } else {
                 System.out.println("No se encontro ningun celular con ese id");
             }
-            System.out.println("¡Celular eliminado correctamente!");
+            System.out.println("Celular eliminado correctamente");
             return true;
         } catch (SQLException e) {
             System.out.println("Error al eliminar el celular: " + e.getMessage());

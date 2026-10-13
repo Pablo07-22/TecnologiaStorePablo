@@ -26,7 +26,7 @@ public enum SistemaOperativo {
         }
         int opcion;
         do {
-            opcion = v.validar_entero("Seleccione una opción (1" + opciones.length + "):");
+            opcion = v.validar_entero("Seleccione una opción (1-" + opciones.length + "):");
         } while (opcion < 1 || opcion > opciones.length);
         return opciones[opcion - 1];
     }

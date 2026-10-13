@@ -9,11 +9,11 @@ public class MenuCliente {
 
     public int MenuCliente() {
         System.out.println("""
-                        ======= Bienvenido a TecnoStorePablo ======
-                                 - ¿QUE DECEAS HACER?
-                                 1. Ver Celulares
-                                 2. Comprar Celulares
-                                 3. Salir 
+                       Bienvenido a TecnoStorePablo
+                       - ¿QUE DECEAS HACER?
+                        1. Ver Celulares
+                        2. Comprar Celulares
+                        3. Salir 
                         """);
         Scanner leer = new Scanner(System.in);
         String op = leer.nextLine();

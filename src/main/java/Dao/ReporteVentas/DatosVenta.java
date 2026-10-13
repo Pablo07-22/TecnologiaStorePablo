@@ -21,7 +21,7 @@ public class DatosVenta {
             try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(nombreArchivo))) {
                 ventas = (List<ReporteVenta>) ois.readObject();
             } catch (Exception e) {
-                System.out.println("Error al cargar el archivo .dat: " + e.getMessage());
+                System.out.println("Error al cargar el archivo" + e.getMessage());
             }
         }
     }

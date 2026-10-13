@@ -26,7 +26,7 @@ public class RegistrarVentaDao {
             cs.setDouble(7, total);
 
             cs.executeUpdate();
-            System.out.println("¡COMPRA REALIZADA CON ÉXITO!");
+            System.out.println("COMPRA REALIZADA CON ÉXITO");
             System.out.println("Código de Factura: " + idVenta);
             return true;
 

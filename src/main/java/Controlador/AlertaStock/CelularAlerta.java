@@ -16,7 +16,7 @@ public class CelularAlerta {
             System.out.println("No hay celulares registrados.");
             return;
         }
-        System.out.println(" INVENTARIO GENERAL DE CELULARES");
+        System.out.println("INVENTARIO GENERAL DE CELULARES");
         lista.forEach(c -> System.out.println(
                 " ID: " + c.getId()
                 + " Modelo: " + c.getModelo()

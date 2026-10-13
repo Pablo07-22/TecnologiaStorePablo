@@ -20,7 +20,7 @@ public class ReporteVentasRealizadas {
         }
 
         // Aplicamos Stream API para mostrar en consola las ventas cargadas
-        System.out.println("========== VENTAS ENCONTRADAS =========");
+        System.out.println("VENTAS ENCONTRADAS");
         rv.stream().forEach(System.out::println);
 
         // Guardar la lista entera en el archivo ventas.dat
@@ -37,20 +37,20 @@ public class ReporteVentasRealizadas {
             return;
         }
 
-        System.out.println("=== REPORTE CON STREAMS ===");
+        System.out.println("REPORTE");
 
         // A. Listar todas las ventas del archivo con referencias a métodos ::
-        System.out.println("1. Todas las Ventas");
+        System.out.println("1.Todas las Ventas");
         listaDat.stream().forEach(System.out::println);
 
         // B. Filtrar ventas mayores a $1,000,000
-        System.out.println("2. Ventas Mayores a $1,000,000 ");
+        System.out.println("2.Ventas Mayores a $1,000,000 ");
         listaDat.stream()
                 .filter(v -> v.getTotal() > 1000000)
                 .forEach(System.out::println);
 
         // C. Obtener solo los nombres de los clientes que compraron (Map & Distinct)
-        System.out.println("3. Clientes que han comprado (Sin repetir)");
+        System.out.println("3.Clientes que han comprado (Sin repetir)");
         listaDat.stream()
                 .map(ReporteVenta::getNombreCliente)
                 .distinct()
@@ -60,6 +60,6 @@ public class ReporteVentasRealizadas {
         double totalGlobal = listaDat.stream()
                 .mapToDouble(ReporteVenta::getTotal)
                 .sum();
-        System.out.println("4. Recaudo Total de Ventas: " + totalGlobal);
+        System.out.println("4.Recaudo Total de Ventas: " + totalGlobal);
     }
 }

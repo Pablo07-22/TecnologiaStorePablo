@@ -23,7 +23,7 @@ public class Validaciones {
                 char c = texto.charAt(i);
                 // Permite letras y espacios
                 if (!Character.isLetter(c) && !Character.isWhitespace(c)) {
-                    System.out.println("Error: Solo se permiten letras.");
+                    System.out.println("Error, Solo se permiten letras.");
                     valido = false;
                     break;
                 }
@@ -40,7 +40,7 @@ public class Validaciones {
             System.out.println(mensaje);
             texto = leer.nextLine().trim();
             if (texto.isEmpty()) {
-                System.out.println("El campo no puede estar vacio");
+                System.out.println("Error, El campo no puede estar vacio");
                 validacion = false;
                 break;
             } else {

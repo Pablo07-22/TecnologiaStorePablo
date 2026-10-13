@@ -13,7 +13,7 @@ public class ActualizarEmpleado {
 
     public void Actualizar() {
         le.Listar();
-        String id = v.validar_texto("Ingrese el id a actualizar");
+        String id = v.validar_texto("Ingrese el id a actualizar: ");
         Empleado actualizar = bed.buscar(id);
         if (actualizar == null) {
             System.out.println("No existe ningun empleado con ese id");

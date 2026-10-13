@@ -22,15 +22,17 @@ public class MenuPrincipalAdmin {
                     mae.MenuAdminEmpleados();
                     break;
                 case 3:
+                    System.out.println("MODULO REPORTE DE VENTAS");
                     ReporteVentasRealizadas rvr = new ReporteVentasRealizadas();
                     rvr.mostrarReportesDesdeDat();
                     break;
                 case 4:
+                    System.out.println("MODULO ALERTA CELULARES");
                     CelularAlerta ca = new CelularAlerta();
                     ca.listarCelularesConAlertas();
                     break;
                 case 5:
-                    System.out.println("============Regresando===========");
+                    System.out.println("REGRESANDO");
                     GestionMenuPrincipal gmp = new GestionMenuPrincipal();
                     gmp.RespuestaMenuPrincipal();
                     break;

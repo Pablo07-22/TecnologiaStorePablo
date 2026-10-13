@@ -34,7 +34,7 @@ public class ListarVentas {
                 lista.add(dto);
             }
         } catch (SQLException e) {
-            System.out.println("Error al obtener reporte de la BD: " + e.getMessage());
+            System.out.println("Error al obtener reporte" + e.getMessage());
         }
         return lista;
     }

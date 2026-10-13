@@ -11,7 +11,7 @@ public class IngresarCelular {
     Validaciones v = new Validaciones();
 
     public Celular IngresarCelular() {
-        String nombreMarca = v.validar_solo_letras("Ingrese la marca del celular:");
+        String nombreMarca = v.validar_solo_letras("Ingrese la marca del celular ");
         Marca marca = new Marca(nombreMarca);
         return new Celular(marca,
                 v.validar_texto("Ingrese el modelo"),

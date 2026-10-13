@@ -30,6 +30,6 @@ public class Marca {
 
     @Override
     public String toString() {
-        return this.marca; // o el nombre del atributo donde guardas "Iphone", "Samsung", etc.
+        return this.marca;
     }
 }

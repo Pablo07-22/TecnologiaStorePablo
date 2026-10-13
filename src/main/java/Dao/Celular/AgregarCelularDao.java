@@ -17,7 +17,7 @@ public class AgregarCelularDao {
             celular.setId("ID-" + UUID.randomUUID().toString().substring(0, 5).toUpperCase());
         }
         if (celular.getMarca() == null) {
-            System.out.println(" Error: La marca del celular es nula.");
+            System.out.println("La marca del celular es nula");
             return;
         }
         if (celular.getMarca().getId() == null || celular.getMarca().getId().trim().isEmpty()) {
@@ -35,7 +35,7 @@ public class AgregarCelularDao {
             cs.setInt(9, celular.getStockMinimo());
 
             cs.executeUpdate();
-            System.out.println("¡Celular y Marca registrados exitosamente!");
+            System.out.println("Celular y Marca registrados exitosamente");
         } catch (SQLException e) {
             System.out.println("Error al insertar el celular: " + e.getMessage());
         }
