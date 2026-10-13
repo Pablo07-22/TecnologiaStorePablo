@@ -1,6 +1,6 @@
 DELIMITER //
 
-CREATE PROCEDURE ObtenerReporteRentas()
+CREATE PROCEDURE ObtenerReporteVentas()
 BEGIN
     SELECT 
         v.id AS id_venta,
@@ -20,3 +20,4 @@ BEGIN
 END //
 
 DELIMITER ;
+

@@ -11,7 +11,7 @@ public class ActualizarCelularDao {
     Conexion c = new Conexion();
 
     public boolean ActualizarCelularDao(Celular celular) {
-        String sql = "{call sp_actualizar_celular(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+        String sql = "{call ActualizarCelular(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
 
         if (celular.getId() == null || celular.getId().trim().isEmpty()) {
             System.out.println("El objeto Celular no tiene un ID asignado");

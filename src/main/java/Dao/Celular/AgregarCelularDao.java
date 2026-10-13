@@ -12,7 +12,7 @@ public class AgregarCelularDao {
     Conexion c = new Conexion();
 
     public void crear(Celular celular) {
-        String sql = "{call sp_crear_celular(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+        String sql = "{call CrearCelular(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         if (celular.getId() == null || celular.getId().trim().isEmpty()) {
             celular.setId("ID-" + UUID.randomUUID().toString().substring(0, 5).toUpperCase());
         }

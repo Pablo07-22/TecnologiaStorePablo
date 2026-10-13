@@ -12,7 +12,7 @@ public class BuscarEmpleadoDao {
     Conexion c = new Conexion();
 
     public Empleado buscar(String id) {
-        String sql = "{call sp_obtener_empleado(?)}";
+        String sql = "{call ObtenerEmpleado(?)}";
 
         try (Connection con = c.conexion(); CallableStatement cs = con.prepareCall(sql)) {
             cs.setString(1, id.trim());

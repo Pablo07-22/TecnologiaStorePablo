@@ -15,7 +15,7 @@ public class BuscarCelularDao {
     private final Conexion c = new Conexion();
 
     public Celular buscar(String id) {
-        String sql = "{call sp_obtener_celular(?)}";
+        String sql = "{call ObtenerCelular(?)}";
 
         try (Connection con = c.conexion(); CallableStatement cs = con.prepareCall(sql)) {
             cs.setString(1, id.trim());

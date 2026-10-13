@@ -10,7 +10,7 @@ public class EliminarCelularDao {
     Conexion c = new Conexion();
 
     public boolean eliminar(String idCelular) {
-        String sql = "{call sp_eliminar_celular(?)}";
+        String sql = "{call LiminarCelular(?)}";
 
         try (Connection con = c.conexion(); CallableStatement cs = con.prepareCall(sql)) {
             cs.setString(1, idCelular);

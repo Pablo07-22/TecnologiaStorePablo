@@ -12,7 +12,7 @@ public class RegistrarClienteDao {
     Conexion c = new Conexion();
 
     public String registrarCliente(Cliente cliente) {
-        String sql = "{call sp_registrar_cliente(?, ?, ?, ?, ?, ?)}";
+        String sql = "{call RegistrarCliente(?, ?, ?, ?, ?, ?)}";
         String idCliente = null;
 
         try (Connection con = c.conexion(); CallableStatement cs = con.prepareCall(sql)) {

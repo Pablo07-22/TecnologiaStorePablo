@@ -131,3 +131,22 @@ BEGIN
 END //
 
 DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE sp_listar_celulares()
+BEGIN
+    SELECT 
+        c.id, 
+        m.nombre_marca, 
+        c.modelo, 
+        c.sistema_operativo, 
+        c.gama, 
+        c.precio, 
+        c.stock, 
+        c.stock_minimo
+    FROM celulares c
+    INNER JOIN marca m ON c.id_marca = m.id;
+END //
+
+DELIMITER ;

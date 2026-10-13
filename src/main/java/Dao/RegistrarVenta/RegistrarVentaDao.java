@@ -12,7 +12,7 @@ public class RegistrarVentaDao {
 
     // Registra la venta y su detalle
     public boolean procesarVenta(String idCliente, String idEmpleado, String idCelular, int cantidad, double precioUnitario, double total) {
-        String sql = "{call sp_realizar_venta(?, ?, ?, ?, ?, ?, ?)}";
+        String sql = "{call RealizarVenta(?, ?, ?, ?, ?, ?, ?)}";
         String idVenta = "VEN-" + UUID.randomUUID().toString().substring(0, 9).toUpperCase();
 
         try (Connection con = c.conexion(); CallableStatement cs = con.prepareCall(sql)) {

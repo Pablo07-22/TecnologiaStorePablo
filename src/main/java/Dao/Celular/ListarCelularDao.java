@@ -18,7 +18,7 @@ public class ListarCelularDao {
 
     public List<Celular> listarCelulares() {
         List<Celular> listaCelulares = new ArrayList<>();
-        String sql = "{call sp_listar_celulares()}";
+        String sql = "{call ListarCelulares()}";
         try (Connection con = c.conexion(); CallableStatement cs = con.prepareCall(sql); ResultSet rs = cs.executeQuery()) {
             while (rs.next()) {
                 String idReal = rs.getString("id");

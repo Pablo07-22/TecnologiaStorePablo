@@ -15,7 +15,7 @@ public class ListarVentas {
 
     public List<ReporteVenta> obtenerTodasLasVentasBD() {
         List<ReporteVenta> lista = new ArrayList<>();
-        String sql = "{call sp_obtener_reporte_ventas()}";
+        String sql = "{call ObtenerReporteVentas()}";
 
         try (Connection con = c.conexion(); CallableStatement cs = con.prepareCall(sql); ResultSet rs = cs.executeQuery()) {
 

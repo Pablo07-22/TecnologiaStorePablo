@@ -12,7 +12,7 @@ public class AgregarEmpleadoDao {
     Conexion c = new Conexion();
 
     public boolean crear(Empleado empleado) {
-        String sql = "{call sp_crear_empleado(?,?,?)}";
+        String sql = "{call CrearEmpleado(?,?,?)}";
 
         if (empleado.getId() == null || empleado.getId().trim().isEmpty()) {
             empleado.setId("ID-" + UUID.randomUUID().toString().substring(0, 6).toUpperCase());

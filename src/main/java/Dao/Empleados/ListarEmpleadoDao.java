@@ -15,7 +15,7 @@ public class ListarEmpleadoDao {
 
     public List<Empleado> ListarEmpleados() {
         List<Empleado> listaEmpleados = new ArrayList<>();
-        String sql = "{call sp_listar_empleados()}";
+        String sql = "{call ListarEmpleados()}";
 
         try (Connection con = c.conexion(); CallableStatement cs = con.prepareCall(sql); ResultSet rs = cs.executeQuery()) {
 
