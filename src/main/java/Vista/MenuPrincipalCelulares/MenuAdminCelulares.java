@@ -35,7 +35,7 @@ public class MenuAdminCelulares {
                            5. Actualizar Precio
                            6. Actualizar Stock
                            7. Actualizar Stock Minimo
-                           8. Actualizar Regresar
+                           8. Regresar
                            """);
         Scanner leer = new Scanner(System.in);
         String op = leer.nextLine();
