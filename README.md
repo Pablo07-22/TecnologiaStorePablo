@@ -117,7 +117,7 @@ ID: ID-4B381 | Modelo: Sa23 | Precio: $1000000.0 | Stock Actual: 1 | Stock Míni
 
 ---
 
-## 📸 Evidencias y Capturas de Pantalla
+## 📸 Imagenes
 
 
 
