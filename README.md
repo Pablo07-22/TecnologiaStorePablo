@@ -119,7 +119,11 @@ ID: ID-4B381 | Modelo: Sa23 | Precio: $1000000.0 | Stock Actual: 1 | Stock Míni
 
 ## 📸 Imagenes
 
+![alt text](image.png)
 
+![alt text](image-1.png)
+
+![alt text](image-2.png)
 
 ---
 *Desarrollado con arquitectura limpia, patrones de diseño y Java moderno.*
