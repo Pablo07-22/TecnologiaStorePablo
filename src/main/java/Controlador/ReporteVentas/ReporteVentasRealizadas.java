@@ -29,7 +29,7 @@ public class ReporteVentasRealizadas {
         List<ReporteVenta> listaDat = dv.getObtenerLista();
 
         if (listaDat.isEmpty()) {
-            System.out.println("Esta vacio o no existe");
+            System.out.println("Esta vacio");
             return;
         }
 
