@@ -135,7 +135,9 @@ BEGIN
     WHERE TRIM(id) = TRIM(p_id);
 END //
 
-DELIMITER ;DELIMITER //
+DELIMITER ;
+
+DELIMITER //
 
 CREATE PROCEDURE CrearCelular(
     IN p_id_celular VARCHAR(20),
@@ -248,7 +250,6 @@ END //
 
 DELIMITER ;
 
-
 DELIMITER //
 
 CREATE PROCEDURE ObtenerCelular(IN p_id VARCHAR(50))
@@ -287,6 +288,7 @@ BEGIN
 END //
 
 DELIMITER ;
+
 DELIMITER //
 
 CREATE PROCEDURE ObtenerReporteVentas()
